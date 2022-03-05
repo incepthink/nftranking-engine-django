@@ -1,0 +1,212 @@
+trait_type,value,multiplier,rarity
+Race,Blue Bull,1,1000.0
+Race,Alien,1,500.0
+Race,Frog,1,163.9344262295082
+Race,Bear,1,11.778563015312132
+Race,Blue Alien,1,1000.0
+Race,None,1,0.0
+Race,Blue Human,1,1000.0
+Race,Cat,1,6.648936170212766
+Race,Human,1,2.354048964218456
+Race,Shiba,1,5.007511266900351
+Race,Ape,1,50.0
+Race,Blue Bear,1,1000.0
+Race,Horse,1,24.93765586034913
+Race,Bull,1,14.705882352941176
+Background,Baskeball Arena,1,50.505050505050505
+Background,Lime Green,1,15.822784810126583
+Background,Maroon,1,15.94896331738437
+Background,Garden Park,1,51.54639175257732
+Background,Red,1,14.22475106685633
+Background,Lilac,1,14.388489208633093
+Background,Dark Green,1,14.245014245014245
+Background,Tomb,1,116.27906976744185
+Background,None,1,0.0
+Background,Mountain Moonlight,1,93.45794392523365
+Background,Swamp,1,48.54368932038835
+Background,Sandy Sunset,1,56.81818181818182
+Background,Mountain View,1,101.01010101010101
+Background,Cold Pink,1,14.43001443001443
+Background,Urban Office,1,55.248618784530386
+Background,Psychedelic Realm,1,47.84688995215311
+Background,Fluorescent Orange,1,16.207455429497568
+Background,Outer Space Explosion,1,92.5925925925926
+Background,Sky Blue,1,14.388489208633093
+Background,Purple,1,14.164305949008499
+Background,Pastel Yellow,1,14.492753623188406
+Background,Retro,1,109.89010989010988
+Background,Teal Blue,1,14.55604075691412
+Background,Fluorescent Yellow,1,16.863406408094434
+Background,Party,1,47.16981132075472
+Background,Outer Space,1,107.52688172043011
+Right Item,Triple Spatula,1,19.25672877846791
+Right Item,Crystal Ball,1,18.41782178217822
+Right Item,Telescope,1,35.23106060606061
+Right Item,Boxing Glove,1,21.782201405152225
+Right Item,Sparkler,1,33.09964412811388
+Right Item,None,1,14.30615164520744
+Right Item,Welding Torch,1,18.309055118110237
+Right Item,Potted Plant,1,47.697435897435895
+Right Item,Trident,1,20.045258620689655
+Right Item,Sword,1,19.58105263157895
+Right Item,Hook,1,27.764179104477613
+Right Item,Indestructable Phone,1,42.86175115207373
+Right Item,White Flag,1,19.831556503198293
+Right Item,Fishing Rod,1,18.237254901960785
+Right Item,Pocket Watch,1,18.52788844621514
+Right Item,Pineapple,1,21.988179669030732
+Right Item,Glass of Scotch,1,17.921001926782274
+Right Item,Spock,1,32.75
+Right Item,Menorah,1,32.86572438162544
+Right Item,Dog on a Leash,1,18.45436507936508
+Right Item,Baloon,1,46.505
+Right Item,Toy Gun,1,17.45028142589118
+Right Item,Torch,1,18.866125760649087
+Right Item,Surfboard,1,21.782201405152225
+Top,Camo Shirt,1,12.755102040816327
+Top,Knight Armour,1,55.865921787709496
+Top,Hawaiian Shirt,1,13.75515818431912
+Top,Topless,1,28.169014084507044
+Top,None,1,0.0
+Top,Vest,1,9.727626459143968
+Top,Jacket,1,8.4530853761623
+Top,Longsleeve Shirt,1,14.814814814814815
+Top,T-Shirt,1,7.496251874062969
+Top,Crop Top,1,19.305019305019304
+Top,Suit,1,12.31527093596059
+Top,Astronaut Suit,1,28.011204481792717
+Top,Track Suit Top,1,12.531328320802006
+Top,Football Jersey,1,13.986013986013987
+Top,Santa Suit,1,18.69158878504673
+Bottoms,Knight Armour,1,55.865921787709496
+Bottoms,Track Pants,1,7.429420505200595
+Bottoms,Cargo Pants,1,19.723865877712033
+Bottoms,Camo Pants,1,38.46153846153846
+Bottoms,None,1,0.0
+Bottoms,Jeans,1,3.5335689045936394
+Bottoms,Dress Pants,1,5.941770647653001
+Bottoms,Briefs,1,19.64636542239686
+Bottoms,Astronaut Suit,1,28.011204481792717
+Bottoms,Shorts,1,4.651162790697675
+Bottoms,Santa Suit,1,55.865921787709496
+Puck,Yellow,1,10.857763300760043
+Puck,Radioactive Waste,1,42.73504273504273
+Puck,Tree Stump,1,36.36363636363637
+Puck,None,1,0.0
+Puck,Red,1,11.441647597254004
+Puck,Autumn Leaves,1,42.918454935622314
+Puck,Gray,1,10.97694840834248
+Puck,Black,1,9.42507068803016
+Puck,Orange,1,10.834236186348862
+Puck,Green,1,11.641443538998836
+Puck,Olympic Podium,1,40.65040650406504
+Puck,Pile of Bones,1,38.91050583657587
+Puck,Ice,1,40.0
+Puck,Royal Blue,1,11.26126126126126
+Puck,Volcanic Isle,1,38.02281368821293
+Puck,Powder Blue,1,10.964912280701755
+Puck,Indigo,1,11.198208286674133
+Eyes,Closed,1,3.849114703618168
+Eyes,None,1,0.0
+Eyes,Fantom,1,144.92753623188406
+Eyes,Bloodshot,1,7.722007722007722
+Eyes,Cyclops,1,357.14285714285717
+Eyes,Hooded,1,5.694760820045558
+Eyes,Wink,1,24.93765586034913
+Eyes,Wide Open,1,3.3738191632928474
+Eyes,Dizzy,1,76.92307692307692
+Eyes,Laser Eyes,1,60.60606060606061
+Eyes,K.O,1,16.835016835016834
+Eye Accessory,,1,2.402882970925971
+Eye Accessory,3D Glasses,1,19.246575342465754
+Eye Accessory,None,1,60.60606060606061
+Eye Accessory,Monocle,1,32.24590163934426
+Eye Accessory,Eye Mask,1,12.355527638190955
+Eye Accessory,Third Eye,1,132.90540540540542
+Eye Accessory,Hipster Glasses,1,5.9860012172854535
+Eye Accessory,Sunglasses,1,6.7827586206896555
+Eye Accessory,Eyepatch,1,10.212876427829698
+Mouth,Rainbow Grillz,1,125.0
+Mouth,Neutral,1,6.3938618925831205
+Mouth,Grin,1,14.641288433382138
+Mouth,Diamond Grillz,1,217.3913043478261
+Mouth,Bubblegum,1,8.968609865470851
+Mouth,None,1,0.0
+Mouth,Drooling,1,11.764705882352942
+Mouth,Tongue Out,1,4.587155963302752
+Mouth,Gold Tooth,1,29.41176470588235
+Mouth,Frown,1,14.727540500736376
+Mouth,Toothy Smirk,1,20.66115702479339
+Mouth,Golden Grillz,1,129.87012987012986
+Mouth,Wide Open,1,14.577259475218659
+Mouth,Smile,1,15.822784810126583
+Mouth,Braces,1,17.123287671232877
+Hat,Trapper Hat,1,21.316568047337277
+Hat,Horns,1,18.380102040816325
+Hat,Baseball Cap,1,13.1
+Hat,None,1,3.5778175313059033
+Hat,Helicopter,1,13.829174664107486
+Hat,Turban,1,22.445482866043612
+Hat,Top Hat,1,20.46875
+Hat,Halo,1,18.714285714285715
+Hat,Beanie,1,13.59433962264151
+Hat,Hard Hat,1,14.614604462474645
+Hat,Bandana,1,18.81201044386423
+Hat,Crown,1,22.586206896551722
+Hat,Fez,1,19.793956043956044
+Hat,Party Hat,1,13.90926640926641
+Hat,Unicorn,1,20.763688760806918
+Hat,Bunny Ears,1,23.09294871794872
+Hat,Pirate Hat,1,17.967581047381547
+Hat,Wizard Hat,1,20.763688760806918
+Hat,Tinfoil Hat,1,21.701807228915662
+Ear Accessory,Gold Studs (Pair),1,84.65517241379311
+Ear Accessory,Gold Hoop,1,14.231884057971014
+Ear Accessory,Silver Hoop,1,3.4480337078651684
+Ear Accessory,None,1,1.9646365422396856
+Ear Accessory,Silver Hoops (Pair),1,36.64179104477612
+Ear Accessory,Diamond Stud,1,2.799315849486887
+Ear Accessory,Airpods,1,14.789156626506024
+Ear Accessory,Gold Stud,1,9.352380952380953
+Ear Accessory,Gold Hoops (Pair),1,144.41176470588235
+Ear Accessory,Diamond Studs (Pair),1,48.613861386138616
+Ear Accessory,Silver Studs (Pair),1,24.1871921182266
+Left Item,Triple Spatula,1,18.776209677419356
+Left Item,Crystal Ball,1,19.6892177589852
+Left Item,Telescope,1,29.47151898734177
+Left Item,Boxing Glove,1,24.126943005181346
+Left Item,Sparkler,1,31.356902356902356
+Left Item,None,1,14.55604075691412
+Left Item,Welding Torch,1,18.26078431372549
+Left Item,Potted Plant,1,43.72300469483568
+Left Item,Trident,1,18.013539651837526
+Left Item,Hook,1,34.492592592592594
+Left Item,Sword,1,18.967413441955195
+Left Item,Indestructable Phone,1,52.02793296089386
+Left Item,White Flag,1,19.44258872651357
+Left Item,Fishing Rod,1,18.514910536779325
+Left Item,Pocket Watch,1,18.626
+Left Item,Pineapple,1,22.38701923076923
+Left Item,Glass of Scotch,1,18.626
+Left Item,Menorah,1,29.75399361022364
+Left Item,Spock,1,32.67719298245614
+Left Item,Dog on a Leash,1,17.47279549718574
+Left Item,Baloon,1,47.035353535353536
+Left Item,Toy Gun,1,18.551792828685258
+Left Item,Torch,1,18.738430583501007
+Left Item,Surfboard,1,21.214123006833713
+Neck Accessory,Flower Garland,1,5.65695067264574
+Neck Accessory,Fantom Chain,1,5.046
+Neck Accessory,None,1,2.0185708518368997
+Neck Accessory,Tie,1,6.988919667590028
+Neck Accessory,Gold Medal,1,6.809716599190283
+Neck Accessory,Fur Wrap,1,6.299625468164794
+Neck Accessory,Bowtie,1,5.669662921348315
+Hair,Locks,1,31.466666666666665
+Hair,Topknot,1,28.51006711409396
+Hair,None,1,1.7385257301808066
+Hair,Bed Hair,1,1.4978843441466854
+Hair,Bald,1,5.596837944664031
+Hair,Waves,1,34.81967213114754
+Hair,Medusa,1,36.0
+Hair,Mohawk,1,32.93023255813954

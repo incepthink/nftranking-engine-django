@@ -1,0 +1,277 @@
+trait_type,value,multiplier,rarity
+Character,Mummy,1,6.25
+Character,Wolfie,1,6.666666666666667
+Character,None,1,0.0
+Character,Fred,1,8.333333333333334
+Character,Bride,1,20.0
+Character,Drac,1,5.0
+Character,Frankie,1,3.125
+Background,New Graveyard,1,33.333333333333336
+Background,Checker Purple,1,50.0
+Background,Castle Wall,1,7.6923076923076925
+Background,Castle Interior,1,20.0
+Background,Castle,1,9.090909090909092
+Background,Skull Pattern 2,1,20.0
+Background,"Leopard, Red",1,100.0
+Background,Purple,1,50.0
+Background,Skull Pattern 1,1,50.0
+Background,Boom,1,100.0
+Background,Dayglow Green,1,100.0
+Background,Kubrick,1,100.0
+Background,Pink,1,50.0
+Background,Cosmic,1,33.333333333333336
+Background,Checker Red,1,100.0
+Background,Checker Blue,1,50.0
+Background,Lynch,1,100.0
+Background,None,1,0.0
+Background,MM Pattern 1,1,50.0
+Background,Dark Purple,1,100.0
+Background,Pink Fire,1,50.0
+Background,MM Pattern 2,1,50.0
+Background,Checker Orange,1,50.0
+Background,MM Pattern 3,1,50.0
+Background,Lab,1,8.333333333333334
+Background,Liquid Abstract,1,33.333333333333336
+Background,Graveyard,1,9.090909090909092
+Background,Red,1,100.0
+Background,Binary,1,100.0
+Background,Skull Pattern 4,1,50.0
+Background,"Leopard, Pink",1,33.333333333333336
+Skin,Mummy OG,1,16.666666666666668
+Skin,Mummy Stripes,1,33.333333333333336
+Skin,Bride Reg,1,50.0
+Skin,Fred Blue,1,100.0
+Skin,Fred Rainbow,1,100.0
+Skin,Frankie Purple,1,50.0
+Skin,Drac Blue,1,100.0
+Skin,Mummy Tie Dye,1,100.0
+Skin,Wolfie Checker,1,50.0
+Skin,Bride Striped,1,100.0
+Skin,Drac Gold,1,100.0
+Skin,Wolfie Grape,1,100.0
+Skin,Drac Green,1,100.0
+Skin,Drac Reg,1,10.0
+Skin,Frankie Yellow,1,50.0
+Skin,Fred Reg,1,16.666666666666668
+Skin,Drac Tie Dye,1,50.0
+Skin,Frankie Swirl,1,50.0
+Skin,Mummy Yellow,1,33.333333333333336
+Skin,Fred Teal,1,100.0
+Skin,Mummy Houndstooth ,1,33.333333333333336
+Skin,Frankie Reg,1,5.882352941176471
+Skin,Wolfie Leopard,1,100.0
+Skin,Drac Yellow,1,33.333333333333336
+Skin,None,1,0.0
+Skin,Wolfie Reg,1,16.666666666666668
+Skin,Frankie Blue,1,33.333333333333336
+Skin,Drac Pink,1,100.0
+Skin,Bride Blue,1,50.0
+Skin,Drac Leopard,1,100.0
+Skin,Wolfie Teal,1,100.0
+Skin,Fred Purple,1,100.0
+Skin,Frankie Teal,1,33.333333333333336
+Skin,Fred Striped,1,50.0
+Skin,Wolfie Teal Face,1,25.0
+Skin,Frankie Rainbow,1,33.333333333333336
+Top,"Jacket, Flannel, Blue",1,100.0
+Top,"Shirt, Hawaiian",1,100.0
+Top,"Jacket, Army, Midnight",1,50.0
+Top,"Vest, Leather, Brown",1,100.0
+Top,Wolfie OG Costume,1,100.0
+Top,"Vest, Leather, Bandolier, Black",1,100.0
+Top,"Tee, Skull, Pink",1,20.0
+Top,"Shirt, Leopard",1,100.0
+Top,"Jacket, Smoking",1,50.0
+Top,"Jacket, Leather, Red",1,100.0
+Top,"Jersey, Soccer 2",1,100.0
+Top,Drac OG Costume,1,100.0
+Top,Wetsuit,1,100.0
+Top,"Jacket, Camo, Urban",1,100.0
+Top,"Turtleneck, Dark Green",1,100.0
+Top,"Jersey, Basketball, Orange",1,100.0
+Top,Wetsuit ,1,100.0
+Top,Robot Suit,1,33.333333333333336
+Top,"Polo, Violet",1,100.0
+Top,"Jersey, Football, Purple",1,50.0
+Top,Bride OG Costume,1,50.0
+Top,Mork,1,50.0
+Top,"Polo, Black",1,100.0
+Top,"Samurai Armor, Gold",1,100.0
+Top,"Caveman, Leopard 2",1,100.0
+Top,"Vest, Denim, Buttons, Blue",1,100.0
+Top,Punk Shirt 2,1,50.0
+Top,"Samurai Armor, Red",1,100.0
+Top,"Jacket, Band Leader",1,100.0
+Top,"Jersey, Soccer 1",1,100.0
+Top,"Jacket, Leather",1,100.0
+Top,"Jersey, Baseball, Red",1,100.0
+Top,"Tank, Pink",1,20.0
+Top,"Jacket, Puffer, Purple",1,100.0
+Top,"Tee, Skeleton",1,100.0
+Top,"Jacket, Striped",1,50.0
+Top,"Shirt, Cowboy",1,100.0
+Top,"Pancho, Bandolier, Violet",1,100.0
+Top,"Jacket, Classic Chinese",1,100.0
+Top,Tux ,1,33.333333333333336
+Top,"Turtleneck, Black",1,100.0
+Top,"Halter Top, Leopard, Pink",1,100.0
+Top,"Shirt, Fancy",1,100.0
+Top,"Tank, Purple",1,33.333333333333336
+Top,"Jacket, Puffer, Blue",1,50.0
+Top,"Vest, Denim, Buttons, Black",1,100.0
+Top,"Pancho, Teal",1,100.0
+Top,"Rain Trench, Purple",1,100.0
+Top,"Jacket, Pirate",1,100.0
+Top,"Low Cut T, Leopard, Purple",1,100.0
+Top,"Jacket, Puffer, Orange",1,100.0
+Top,None,1,0.0
+Top,"Shirt, Guayabera 2",1,50.0
+Top,Wizard Robes,1,100.0
+Top,Sailor Outfit,1,100.0
+Top,Jumpsuit,1,100.0
+Top,"Caveman, Tiger 1",1,100.0
+Top,"Raincoat, Yellow",1,50.0
+Top,Clown Suit,1,33.333333333333336
+Top,Punk Shirt 1,1,50.0
+Top,Toga,1,50.0
+Top,"Hoodie, Black",1,100.0
+Top,"Low Cut T, Pink",1,100.0
+Top,"Jacket, Leather, Purple",1,100.0
+Top,"Jacket, Puffer, Pink",1,100.0
+Top,"Polo, Orange",1,100.0
+Top,"Tank, Blue",1,33.333333333333336
+Top,"Vest, Denim, Black",1,50.0
+Top,"Shirt, Guayabera 3",1,100.0
+Top,"Flannel, Red",1,100.0
+Mouth,"Mustache, Pencil",1,5.0
+Mouth,"Mask, Cloth, Green",1,10.0
+Mouth,None,1,1.1111111111111112
+Mouth,"Mask, Cloth, Red",1,10.0
+Mouth,"Mask, Cloth, Pink",1,10.0
+Mouth,"Mustache, Villian",1,10.0
+Mouth,"Mustache, Handlebar",1,3.3333333333333335
+Mouth,"Mask, Cloth, Blue",1,10.0
+Eyes,"Glasses, Pointed, Pink",1,86.0
+Eyes,"Glasses, MX, Purple",1,86.0
+Eyes,"Aviators, Copper",1,28.666666666666668
+Eyes,"Wayfarers, Blue",1,28.666666666666668
+Eyes,"Goggles, Yellow",1,86.0
+Eyes,"Wayfarers, Purple",1,43.0
+Eyes,"Goggles, VR",1,43.0
+Eyes,"Wayfarers, Pink",1,43.0
+Eyes,"Eyes, Cyborg, Red",1,86.0
+Eyes,"Glasses, 3D",1,43.0
+Eyes,"Glasses, Pointed, Green",1,86.0
+Eyes,"Eyes, Spiral",1,86.0
+Eyes,"Eyes, Cyborg, Light Purple",1,86.0
+Eyes,"Glasses, Pointed, Purple ",1,86.0
+Eyes,"Eyes, Cyborg, Green",1,43.0
+Eyes,"Wayfarers, Yellow",1,43.0
+Eyes,"Glasses, Round, Red",1,86.0
+Eyes,"Glasses, 70's",1,86.0
+Eyes,"Eyes, Cyborg, Pink",1,86.0
+Eyes,"Eyes, Bloodshot",1,86.0
+Eyes,"Aviators, Gold",1,28.666666666666668
+Eyes,"Goggles, Saftey",1,21.5
+Eyes,"Eyes, Alien Side",1,43.0
+Eyes,"Laser Glow, Purple",1,12.285714285714286
+Eyes,"Eyes, Laser Beam",1,43.0
+Eyes,"Wayfarers, Cobalt",1,43.0
+Eyes,"Glasses, Round, Teal",1,28.666666666666668
+Eyes,None,1,7.142857142857143
+Eyes,"Eyes, Cyborg, Yellow",1,43.0
+Eyes,"Eyes, Headlight",1,43.0
+Eyes,"Goggles, Blue",1,28.666666666666668
+Eyes,"Wayfarers, Red",1,43.0
+Eyes,Monocle,1,43.0
+Eyes,"Eyes, Demon",1,86.0
+Eyes,"Eyes, Detached",1,86.0
+Eyes,"Laser Glow, Orange",1,28.666666666666668
+Eyes,"Glasses, Round, Yellow",1,28.666666666666668
+Eyes,"Glasses, Robot",1,86.0
+Eyes,"Glasses, Round, Purple",1,43.0
+Eyes,"Wayfarers, Orange",1,86.0
+Eyes,"Laser Glow, Blue",1,28.666666666666668
+Eyes,"Glasses, Oversized, Green",1,86.0
+Eyes,"Glasses, Round, Rose",1,43.0
+Eyes,"Goggles, Scuba",1,21.5
+Pet,"Bat, Purple ",1,53.0
+Pet,"Spider, Pink",1,5.888888888888889
+Pet,"Bat, Pink",1,10.6
+Pet,"Mouse, Blue",1,53.0
+Pet,"Mouse, Pink",1,26.5
+Pet,"Mouse, Yellow",1,26.5
+Pet,"Bat, Purple",1,10.6
+Pet,"Spider, Purple",1,26.5
+Pet,"Mouse, Teal",1,53.0
+Pet,"Mouse, Red",1,10.6
+Pet,"Spider, Blue",1,13.25
+Pet,"Spider, Teal",1,53.0
+Pet,"Bat, Green",1,53.0
+Pet,"Spider, Red",1,53.0
+Pet,"Spider, Green",1,53.0
+Pet,None,1,2.127659574468085
+Pet,"Bat, Blue",1,17.666666666666668
+Pet,"Bat, Red",1,17.666666666666668
+Pet,"Mouse, Green",1,8.833333333333334
+Button,"Button, Star",1,10.5
+Button,"Button, Bat",1,10.5
+Button,"Button, Cyber Skull",1,4.2
+Button,"Button, Moon",1,21.0
+Button,"Button, Skull",1,10.5
+Button,"Button, MM",1,10.5
+Button,None,1,1.2658227848101267
+Button,"Button, Brain",1,21.0
+Button,"Button, Monster Smiley",1,7.0
+Button,"Button, Monster Supreme",1,7.0
+Neck,"Neckerchief, Leopard",1,15.0
+Neck,"Choker, Gold",1,15.0
+Neck,"Choker, Silver",1,15.0
+Neck,"Neckerchief, Leopard, Red ",1,15.0
+Neck,Sid Necklace,1,3.75
+Neck,None,1,1.1764705882352942
+Neck,"Neckerchief, Leopard , Teal ",1,15.0
+Neck,"Rope Chain, Gold",1,2.5
+Hair,None,1,1.0416666666666667
+Hair,"Bow, Tiger, Purple",1,4.0
+Hair,"Bow, Tiger, Pink",1,2.0
+Hair,"Bow, Purple",1,4.0
+HeadChoice,None,1,1.8518518518518519
+HeadChoice,Helmet,1,4.181818181818182
+HeadChoice,Hat,1,1.3142857142857143
+Hat,"Beanie, Teal",1,11.666666666666666
+Hat,"Beanie, Black",1,17.5
+Hat,"Hat, Captains",1,35.0
+Hat,"Hat, Bell Hop",1,17.5
+Hat,Army Hat,1,35.0
+Hat,"Flip Cap, MM, Green",1,35.0
+Hat,"Flip Cap, MM, Red",1,11.666666666666666
+Hat,Bandito Hat,1,35.0
+Hat,"Flat Cap, Supreme",1,35.0
+Hat,"Baseball Hat, Skull Logo",1,35.0
+Hat,Halo,1,35.0
+Hat,Viking Helmet 1,1,35.0
+Hat,"Flip Cap, Monster, Pink",1,17.5
+Hat,"Beanie, Blue",1,35.0
+Hat,"Hat, Pirate",1,35.0
+Hat,"Hat, Traditional Chinese",1,17.5
+Hat,Viking Helmet 2,1,35.0
+Hat,None,1,1.5384615384615385
+Hat,"Flat Cap, Irish",1,35.0
+Hat,"Baseball Hat, Monster",1,17.5
+Hat,"Hat, Eastwood",1,17.5
+Hat,"Tilt Cap, Monster Smile",1,35.0
+Hat,"Flat Cap, Monster, Pink",1,35.0
+Hat,"Hat, Mariachi",1,11.666666666666666
+Helmet,"Helmet, Samurai, Orange",1,5.5
+Helmet,"Helmet, Moto, Shield",1,5.5
+Helmet,"Helmet, Football, Purple",1,11.0
+Helmet,"Helmet, Football, Gold",1,3.6666666666666665
+Helmet,"Helmet, Samurai, Gold",1,11.0
+Helmet,None,1,1.1235955056179776
+Helmet,"Helmet, Samurai, Blue",1,11.0
+Helmet,"Helmet, Moto",1,11.0
+Earrings,"Hoops, Gold",1,1.0
+Earrings,None,1,1.0101010101010102
+Smoking,Cigarette,1,1.0
+Smoking,None,1,1.0101010101010102
