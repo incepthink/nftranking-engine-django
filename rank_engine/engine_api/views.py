@@ -1,4 +1,5 @@
 from genericpath import exists
+from io import BytesIO
 from itertools import count
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
@@ -13,6 +14,8 @@ import concurrent.futures
 import requests
 import json
 from ast import literal_eval
+import zipfile
+# import StringIO
 import time
 
 
@@ -553,3 +556,46 @@ class ProjectRanks(APIView):
         limit = request.query_params.get('limit') or 10
 
         return Response(ranks_list[int(offset):int(offset)+int(limit)], status=status.HTTP_201_CREATED)
+
+# class to download the csv file
+
+
+class CSVDownloader(APIView):
+
+    def get(self, request, project_name):
+
+        # name = request.query_params.get('project_name')
+
+        # # get the csv file from data for attributes
+        ranks_df = pd.read_csv('rank_engine/engine_api/data/' +
+                               project_name+'/ranks.csv')
+
+        file_paths = ['rank_engine/engine_api/data/' + project_name+'/ranks.csv',
+                      'rank_engine/engine_api/data/' + project_name+'/attributes_values_meta.csv',
+                      'rank_engine/engine_api/data/' + project_name+'/attributes_types_meta.csv']
+
+        zip_subdir = project_name
+
+        zip_filename = "%s.zip" % zip_subdir
+
+        s = BytesIO()
+
+        zf = zipfile.ZipFile(s, "w")
+
+        for fpath in file_paths:
+            fdir, fname = os.path.split(fpath)
+            zip_path = os.path.join(zip_subdir, fname)
+
+            zf.write(fpath, zip_path)
+
+        zf.close()
+
+        resp = HttpResponse(s.getvalue(), content_type="application/x-zip-compressed")
+
+        resp['Content-Disposition'] = 'attachment; filename=%s' % zip_filename
+
+        return resp
+
+        raise Http404
+
+        # send all the attributes to the front end
