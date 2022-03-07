@@ -17,11 +17,18 @@ from ast import literal_eval
 import zipfile
 # import StringIO
 import time
-
+from web3 import Web3, HTTPProvider
 
 # Create your views here.
 
 from .models import Project
+
+
+w3 = Web3(HTTPProvider('https://rpc.ftm.tools'))
+
+# if (not w3.isConnected()):
+#     print("Not connected")
+#     exit()
 
 
 def rank_new_project(project_name, base_url, abi, address, total_count):
@@ -56,6 +63,8 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
     true_count = total_count
 
+    contractCaller = w3.eth.contract(address=address, abi=abi)
+
     for i in range(1, true_count + 1):
         # print('Page:', i)
         url = base_url + str(
@@ -75,7 +84,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
             # try:
             print(id_local)
 
-            # contractCaller.functions.ownerOf(int(id_local)).call()
+            contractCaller.functions.ownerOf(int(id_local)).call()
             # except Exception as e:
             # continue
 
@@ -417,20 +426,20 @@ class ProjectList(APIView):
         serializer = ProjectSerializer(data=request.data)
         if serializer.is_valid():
 
-            if(Project.objects.filter(name=request.data['name']).exists()):
-                print("already exists", request.data['name'])
-                # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-            else:
-                if not os.path.exists('rank_engine/engine_api/data/' + request.data['name']):
-                    os.makedirs('rank_engine/engine_api/data/' +
-                                request.data['name'])
+            # if(Project.objects.filter(name=request.data['name']).exists()):
+            #     print("already exists", request.data['name'])
+            #     # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            # else:
+            if not os.path.exists('rank_engine/engine_api/data/' + request.data['name']):
+                os.makedirs('rank_engine/engine_api/data/' +
+                            request.data['name'])
 
             # print(request.data['ipfs'])
 
-                rank_new_project(
-                    request.data['name'], request.data['ipfs'], request.data['abi'], request.data['address'], request.data['count'])
+            rank_new_project(
+                request.data['name'], request.data['ipfs'], request.data['abi'], request.data['address'], request.data['count'])
 
-                serializer.save()
+            serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -590,7 +599,8 @@ class CSVDownloader(APIView):
 
         zf.close()
 
-        resp = HttpResponse(s.getvalue(), content_type="application/x-zip-compressed")
+        resp = HttpResponse(
+            s.getvalue(), content_type="application/x-zip-compressed")
 
         resp['Content-Disposition'] = 'attachment; filename=%s' % zip_filename
 
