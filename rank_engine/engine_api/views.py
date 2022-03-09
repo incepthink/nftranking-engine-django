@@ -440,11 +440,11 @@ class ProjectList(APIView):
             rank_new_project(
                 request.data['name'], request.data['ipfs'], request.data['abi'], request.data['address'], request.data['count'])
 
-           
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk, format=None):
+    def delete(self, request, format=None):
+        pk = request.data['pk']
         project = self.get_object(pk)
         project.delete()
 
@@ -453,6 +453,7 @@ class ProjectList(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     def put(self, request):
+
         serializer = ProjectSerializer(data=request.data)
         if serializer.is_valid():
             name = request.data['name']
