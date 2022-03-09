@@ -426,7 +426,8 @@ class ProjectList(APIView):
         serializer = ProjectSerializer(data=request.data)
         if serializer.is_valid():
 
-            # if(Project.objects.filter(name=request.data['name']).exists()):
+            if(not Project.objects.filter(name=request.data['name']).exists()):
+                serializer.save()
             #     print("already exists", request.data['name'])
             #     # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             # else:
@@ -439,7 +440,7 @@ class ProjectList(APIView):
             rank_new_project(
                 request.data['name'], request.data['ipfs'], request.data['abi'], request.data['address'], request.data['count'])
 
-            serializer.save()
+           
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
