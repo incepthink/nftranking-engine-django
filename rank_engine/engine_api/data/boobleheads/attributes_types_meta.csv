@@ -2,7 +2,6 @@ trait_type,multiplier
 Race,1
 Background,1
 Left Item,1
-Right Item,1
 Top,1
 Bottoms,1
 Puck,1
@@ -12,4 +11,5 @@ Mouth,1
 Neck Accessory,1
 Hat,1
 Ear Accessory,1
+Right Item,1
 Hair,1

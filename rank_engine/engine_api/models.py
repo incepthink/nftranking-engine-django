@@ -13,6 +13,10 @@ class Project(models.Model):
     abi = models.CharField(max_length=10000, default="")
     address = models.CharField(max_length=200, default="")
     count = models.IntegerField(default=0)
+    banner_link = models.CharField(max_length=1000)
+    total_supply = models.IntegerField()
+    volume = models.IntegerField()
+
 
     def __str__(self):
         return self.name
