@@ -1,6 +1,7 @@
 from genericpath import exists
 from io import BytesIO
 from itertools import count
+from attr import attributes
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 import pandas as pd
@@ -33,7 +34,7 @@ w3 = Web3(HTTPProvider('https://rpc.ftm.tools'))
 
 def rank_new_project(project_name, base_url, abi, address, total_count):
     out = []
-    CONNECTIONS = 100
+    CONNECTIONS = 30
 
     TIMEOUT = 5000
 
@@ -88,7 +89,8 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
             # except Exception as e:
             # continue
 
-            nfts.append([data['name'], data['attributes'], data['image'], 0])
+            nfts.append(
+                [data['name'], data['attributes'], data['image'], 0, 0])
 
             attributes_count[len(data['attributes'])] = attributes_count[len(
                 data['attributes'])] + 1 if len(
@@ -154,7 +156,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
     print(f'Took {time2-time1:.2f} s')
     nft_df = pd.DataFrame(nfts,
-                          columns=['name', 'attributes', 'image', 'rarity score'])
+                          columns=['name', 'attributes', 'image', 'rarity score', 'token id'])
 
     #  drop the first column
     # nft_df = nft_df.drop(nft_df.columns[0], axis=1)
@@ -242,6 +244,9 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
         nft[3] = total_rarity
 
+        nft[4] = name.split('#')[-1]
+        # print(nft[4])
+
     # added Left Right Same in attribute lists
 
     # add none attributes to attributes list
@@ -252,8 +257,10 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
     print(attributes_types)
 
+    print(nfts[0])
+
     nft_df = pd.DataFrame(nfts,
-                          columns=['name', 'attributes', 'image', 'rarity score'])
+                          columns=['name', 'attributes', 'image', 'rarity score', 'token id'])
 
     nft_df.sort_values(by=['rarity score'], ascending=False, inplace=True)
 
@@ -263,8 +270,12 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
     nft_df['rank'] = nft_df.index + 1
 
-    nft_df.to_csv('rank_engine/engine_api/data/' +
-                  project_name+'/ranks.csv', index=False)
+    try:
+        nft_df.to_csv('rank_engine/engine_api/data/' +
+                      project_name+'/ranks.csv', index=False)
+
+    except Exception as e:
+        print(e)
 
     #  save all the trait types to a csv with multiplier set to 1 for each
 
@@ -424,26 +435,43 @@ class ProjectList(APIView):
 
     def post(self, request):
         serializer = ProjectSerializer(data=request.data)
+
+        contractCaller = w3.eth.contract(
+            address=request.data['address'], abi=request.data['abi'])
+        totalSupply = contractCaller.functions.totalSupply().call()
+
+        print(totalSupply)
+
         if serializer.is_valid():
 
-            # if(Project.objects.filter(name=request.data['name']).exists()):
+            if(not Project.objects.filter(name=request.data['name']).exists()):
+
+                serializer['volume'] = totalSupply
+
+                serializer.save()
+
+            else:
+                Project.objects.filter(name=request.data['name']).update(
+                    volume=totalSupply)
+
             #     print("already exists", request.data['name'])
             #     # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             # else:
             if not os.path.exists('rank_engine/engine_api/data/' + request.data['name']):
                 os.makedirs('rank_engine/engine_api/data/' +
                             request.data['name'])
+                print("created", request.data['name'])
 
             # print(request.data['ipfs'])
 
             rank_new_project(
                 request.data['name'], request.data['ipfs'], request.data['abi'], request.data['address'], request.data['count'])
 
-            serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk, format=None):
+    def delete(self, request, format=None):
+        pk = request.data['pk']
         project = self.get_object(pk)
         project.delete()
 
@@ -452,6 +480,7 @@ class ProjectList(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     def put(self, request):
+
         serializer = ProjectSerializer(data=request.data)
         if serializer.is_valid():
             name = request.data['name']
@@ -515,12 +544,20 @@ class ProjectAttributes(APIView):
         attributes_df.fillna('None', inplace=True)
 
         attributes_list = []
+        attributes_map = {}
 
         for index, row in attributes_df.iterrows():
-            attributes_list.append(
-                [row['trait_type'], row['value'], row['multiplier'], row['rarity']])
 
-        return Response(attributes_list, status=status.HTTP_201_CREATED)
+            if row['trait_type'] not in attributes_map:
+                attributes_map[row['trait_type']] = []
+
+            attributes_map[row['trait_type']].append(
+                [row['value'], row['multiplier'], row['rarity']])
+
+            # attributes_list.append(
+            #     [row['trait_type'], row['value'], row['multiplier'], row['rarity']])
+
+        return Response(attributes_map, status=status.HTTP_201_CREATED)
 
     def put(self, request, project_name):
 
@@ -545,9 +582,20 @@ class ProjectAttributes(APIView):
 
 class ProjectRanks(APIView):
 
-    def get(self, request, project_name):
+    def get(self, request, project_name, id=-1, filters=""):
 
         # name = request.query_params.get('project_name')
+
+        filters_set = []
+        filters_dict = {}
+
+        if(filters != ""):
+            filters_set = filters.split(",")
+            filters_values = filters_set[1].split("|")
+            filters_attribute = filters_set[0].split("|")
+            filters_dict = dict(zip(filters_attribute, filters_values))
+
+            print(filters_dict)
 
         # # get the csv file from data for attributes
         ranks_df = pd.read_csv('rank_engine/engine_api/data/' +
@@ -555,16 +603,57 @@ class ProjectRanks(APIView):
 
         # send all the attributes to the front end
 
-        ranks_list = []
+        if id != -1:
+            ranks_list = ranks_df.loc[ranks_df['token id'] == id]
 
-        for index, row in ranks_df.iterrows():
-            ranks_list.append([row['rank'], row['name'], row['rarity score']])
+            return Response(ranks_list.to_dict(orient='records'), status=status.HTTP_201_CREATED)
 
-        offset = request.query_params.get('offset') or 0
+        else:
 
-        limit = request.query_params.get('limit') or 10
+            ranks_list = []
 
-        return Response(ranks_list[int(offset):int(offset)+int(limit)], status=status.HTTP_201_CREATED)
+            for index, row in ranks_df.iterrows():
+
+                if(filters == ""):
+                    ranks_list.append(row.to_dict())
+
+                else:
+                    row_attributes = literal_eval(row['attributes'])
+
+                    row_attributes_map = {}
+
+                    for attribute in row_attributes:
+                        row_attributes_map[attribute['trait_type']
+                                           ] = attribute['value']
+
+                    # print(row_attributes_map['Race'])
+
+                    if filters_dict.items() <= row_attributes_map.items():
+                        ranks_list.append(row.to_dict())
+
+                    # for attribute,attribute_type in filters_dict.items():
+                    #     if(attribute == row_attributes_map[attribute_type]):
+
+                    # for attribute_type,attribute in filters_dict.items():
+                    #     if(attribute in row_attributes_map[attribute_type]):
+                    #         ranks_list.append(row.to_dict())
+                        # print(row_attributes)
+                        # if(attribute in row_attributes):
+                        #     print(attribute,row)
+                        #     ranks_list.append(row.to_dict())
+
+            offset = request.query_params.get('offset') or 0
+
+            limit = request.query_params.get('limit') or 10
+
+            return Response(ranks_list[int(offset):int(offset)+int(limit)], status=status.HTTP_201_CREATED)
+
+    # def get(self,request,project_name,id):
+
+    #     ranks_df = pd.read_csv('rank_engine/engine_api/data/' +
+    #                              project_name+'/ranks.csv')
+
+    #     rank_df = ranks_df.loc[ranks_df['rank'] == id]
 
 # class to download the csv file
 

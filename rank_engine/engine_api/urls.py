@@ -6,8 +6,12 @@ urlpatterns = [
          ProjectMeta.as_view(), name='project-meta'),
     path('projects/attributes/<str:project_name>/',
          ProjectAttributes.as_view(), name='project-attributes'),
-    path('projects/ranks/<str:project_name>/',
+    path('projects/ranks/<str:project_name>/filter/<str:filters>/',
          ProjectRanks.as_view(), name='project-ranks'),
+         path('projects/ranks/<str:project_name>/',
+         ProjectRanks.as_view(), name='project-ranks'),
+    path(
+        'projects/ranks/<str:project_name>/<int:id>/', ProjectRanks.as_view(), name='project-ranks-id'),
     path('projects/download/<str:project_name>/',
          CSVDownloader.as_view(), name='project-download'),
 ]
