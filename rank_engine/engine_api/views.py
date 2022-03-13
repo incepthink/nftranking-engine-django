@@ -76,6 +76,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
         try:
             r = requests.get(url, timeout=timeout)
             data = json.loads(r.text)
+            print(data)
             global id
 
             name = data['name']
@@ -83,7 +84,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
             id_local = name.split('#')[-1]
 
             # try:
-            print(id_local)
+            # print(id_local)
 
             contractCaller.functions.ownerOf(int(id_local)).call()
             # except Exception as e:
@@ -150,7 +151,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
             finally:
                 out.append(data)
 
-                print(str(len(out)), end="\r")
+                # print(str(len(out)), end="\r")
 
         time2 = time.time()
 
@@ -253,11 +254,11 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
 
     # attributes.update(none_attributes)
 
-    print(attributes_rarity)
+    # print(attributes_rarity)
 
-    print(attributes_types)
+    # print(attributes_types)
 
-    print(nfts[0])
+    # print(nfts[0])
 
     nft_df = pd.DataFrame(nfts,
                           columns=['name', 'attributes', 'image', 'rarity score', 'token id'])
@@ -299,7 +300,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
     #         'multiplier': 1
     #     }, ignore_index=True)
 
-    print(attributes_types_df)
+    # print(attributes_types_df)
 
     # save attributes_types_df to csv sheet 2
 
@@ -343,7 +344,7 @@ def rank_new_project(project_name, base_url, abi, address, total_count):
     #     },
     #     ignore_index=True)
 
-    print(attributes_values_df)
+    # print(attributes_values_df)
 
     attributes_values_df.to_csv(
         'rank_engine/engine_api/data/' +
@@ -440,14 +441,14 @@ class ProjectList(APIView):
             address=request.data['address'], abi=request.data['abi'])
         totalSupply = contractCaller.functions.totalSupply().call()
 
-        print(totalSupply)
+        # print(totalSupply)
 
         if serializer.is_valid():
 
             if(not Project.objects.filter(name=request.data['name']).exists()):
 
-                serializer['volume'] = totalSupply
-
+                # serializer['volume'] = totalSupply
+                # pass
                 serializer.save()
 
             else:
@@ -595,7 +596,7 @@ class ProjectRanks(APIView):
             filters_attribute = filters_set[0].split("|")
             filters_dict = dict(zip(filters_attribute, filters_values))
 
-            print(filters_dict)
+            # print(filters_dict)
 
         # # get the csv file from data for attributes
         ranks_df = pd.read_csv('rank_engine/engine_api/data/' +
