@@ -1,2 +1,8 @@
 mysite/
 ranking_engine/
+bin/
+lib/
+rank_engine/rank_engine/engine_api/data/
+.Python
+pyvenv.cfg
+rank_engine/db.sqlite3
